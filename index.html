@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="front-card">
+        <img src="./images/card-logo.svg" alt="">
+        <h2 id="cardNumberDisp">0000 0000 0000 0000</h2>
+        <div class="desc">
+          <p id="nameDisp">Jane Appleseed</p>
+          <div class="dispwei">
+            <p id="monthDisp" >00/</p><p id="yearDisp">00</p>
+          </div>
+        </div>
+      </div>
+        <div class="back-card">
+            <p id="cvcDisp">000</p>
+        </div>
+    </div>
+    <div class="form" id="form">
+      <form action="" id="forms">
+        <label for="" class="text">Cardholder Name</label><br>
+        <input type="text" id="name" class="field" placeholder="e.g. Jane Appleseed"><br>
+        <p id="errName" class="err">Can't be blank</p>
+        <p id="formcontrol"></p>
+        <label for="" class="text">Card Number</label><br>
+        <input type="text" id="cardNumber" class="field" placeholder="e.g. 1234 5678 9123 0000"><br>
+        <p id="errNumber" class="err">Can't be blank</p>
+        <div class="inputs">
+          <div class="expdate">
+            <label for="" class="text">Exp. Date (MM/YY)</label>
+            <div class="expfield">
+              <input id="month" type="text" class="mo field" placeholder="MM">
+              <input id="year" type="text" class="mo field" placeholder="YY">
+            </div>
+            <p id="errMonth" class="err">Can't be blank</p>
+
+            <p id="formcontrol"></p>
+          </div>
+          <div class="cvc">
+            <label for="" class="text">CVC</label><br>
+            <input id="cvc" type="text" placeholder="e.g. 123" class="field cvsfield">
+            <p id="errCvc" class="err">Can't be blank</p>
+            <p id="formcontrol"></p>
+          </div>
+        </div>
+      </form>
+      <button class="confirmBtn" id="submit">Confirm</button>
+    </div>
+    <div class="completeState" id="complete">
+      <img src="./images/icon-complete.svg" alt="">
+      <h2>Thank you!</h2>
+      <p>We've added your card details</p>
+      <button class="confirmBtn"  id="continue">Continue</button>
+    </div>
+  </div>
+<script src="./app.js"></script>
+</body>
+</html>

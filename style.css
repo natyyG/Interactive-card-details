@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --white: hsl(0deg 0% 100%);
+    --linearGradient: hsl(249, 99%, 64%);
+    --red: hsl(0, 100%, 66%);
+    --lightGrayishViolet: hsl(270, 3%, 87%);
+    --darkGrayishViolet: hsl(279, 6%, 55%);
+    --veryDarkViolet: hsl(278, 68%, 11%);
+
+}
+.container{
+    width:100%;
+    height:100vh;
+    background-image: url(./images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    display:flex;
+    align-items: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    overflow: hidden;
+}
+.card{
+    flex-direction: column;
+    width: 35rem;
+    display: flex;
+    margin-left: 12%;
+    padding-right: 5px;
+    padding-left: -36px;
+    justify-content: center;
+}
+.front-card{
+    background-image: url(./images/bg-card-front.png);
+    background-repeat: no-repeat;
+    height:300px;
+    padding:25px;
+    color: var(--white);
+}
+.front-card h2{
+    margin-top: 55px;
+    letter-spacing: 3px;
+    font-size: 30px;
+    width: 25rem;
+    text-align: center;
+}
+.front-card .desc{
+    display: flex;
+    justify-content: space-between;
+    width: 25rem;
+    margin-top: 28px;
+    text-transform: uppercase;
+    padding: 0px 0px;
+}
+.back-card{
+    background-image: url(./images/bg-card-back.png);
+    background-repeat: no-repeat;
+    height: 300px;
+    margin-top: 60px;
+    width: 100%;
+    margin-left: 100px;
+    margin-top: -77px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.back-card p{
+    position: fixed;
+    top: auto;
+    left: 40rem;
+    color: var(--white);
+    margin-bottom: 56px;
+}
+
+/*  */
+
+
+.form{
+    display:flex;
+    flex-direction: column;
+    margin-top:0px;
+    z-index: 2;
+    margin-left: 3%;
+}
+.text{
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.field{
+    width: 355px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid hsl(279, 6%, 55%);
+    padding-left: 13px;
+    margin-top: 10px;
+    margin-bottom: 22px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size:18px;
+    
+}
+.field:hover{
+    cursor: pointer;
+}
+.field:focus{
+    border: 1px solid hsl(249, 99%, 64%);
+}
+.expfield{
+    display:flex;
+}
+.inputs{
+    display:flex;
+}
+.mo{
+    width: 67px;
+    margin-right:10px
+}
+.cvc{
+    margin-left:16px;
+}
+.cvsfield{
+    width:155px;
+}
+.confirmBtn{
+    width: 100%;
+    height: 42px;
+    border-radius: 7px;
+    border: none;
+    color: white;
+    background-color: var(--veryDarkViolet); 
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 14px;
+}
+.dispwei{
+    display:flex;
+}
+.err{
+    display: none;
+    margin-top: -15px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: var(--red);
+}
+
+
+
+
+
+
+
+
+.completeState{
+    display:none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:19rem;
+    margin-left: 99px;
+}
+.completeState h2{
+    margin-top:20px;
+    margin-bottom:20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.completeState p{
+    margin-bottom:40px;
+}
+
+@media(max-width:1263px){
+    .container{
+        flex-direction:column;
+        background-image: url('images/bg-main-mobile.png');
+        background-position-y: top;
+        background-size: 37rem;
+        background-repeat: repeat-x;
+        justify-content: center;
+    }
+    .back-card{
+        position: relative;
+        right: 160px;
+        top: -34px;
+        min-width: 38rem;
+    }
+    .back-card p{
+        position: absolute;
+
+        left: 22.5rem;
+        color: var(--white);
+        margin-bottom: 56px;
+    }
+    .front-card{
+        margin-top: 29px;
+        z-index: 3;
+        position: relative;
+        left: 315px;
+    }
+    .form{
+        margin-top: -49px;
+    }
+    .card{
+        min-width: 33rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 0px;
+    }
+    .completeState{
+        margin-left: 0px;
+    }
+}
